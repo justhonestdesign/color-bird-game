@@ -1,0 +1,61 @@
+<html>
+
+
+<head>   <script src="js/jquery.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+   
+         
+    
+ <script>
+        
+        $( document ).ready(function()  {
+            
+           
+                
+                        
+                          TweenLite.to("circle.eye", 0, {fill:"#fff"})
+                    TweenLite.to("path.beak", 0, {fill:"rgb(255, 0, 0)"})
+            TweenMax.to("path.leg", 2, { ease: Bounce.easeOut, y: "20%",  yoyo: true, repeat:-1});
+            
+             TweenMax.fromTo(".wing2", 2, { fill: "gray", rotationY: 5, rotationX: 20, }, {rotation: -5, delay: 1, repeat: -1, repeatDelay:1, yoyo:true });
+
+            
+             function move(){
+            TweenMax.to("svg.colorbird", 1, {x:-25, yoyo:true, repeat:-1, ease: Expo.easeInOUt} )
+            
+                            }
+            
+            
+     move(); 
+            
+        
+            
+            
+         });
+    
+    </script>
+    
+    <style>
+        .colorbird {
+            max-width:100%;
+            width:25%;
+           
+        }
+    </style>
+ </head>
+
+
+
+
+
+<body>
+    
+    
+
+
+
+
+<svg class="colorbird" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 612"><g id="beak"><path class="beak" d="M569.2 214.6l.1-.1 41.1-21.2-28-4.4-27.4-4.4z" id="Layer_6"/></g><g id="leg"><path class="leg" d="M492.9 475.3l22.6 4.2-45.5-22.6-36.1-29.2 39-63.9-15.3-7.8-40.2 78.8 9.2 4.7-.1.1 36.7 19.8-33.6 27 42.2-15 21 3.9.2.2z" id="Layer_5"/></g><g id="body"><path class="body" d="M553.5 266.7c1.4-1.2 2.8-2.5 4.2-3.9 27.2-27.2 27.2-71.2 0-98.4s-71.2-27.2-98.4 0c-2.3 2.3-4.3 4.6-6.2 7.1l-.5-.4-104.8 104.8-59.2 59.2-50.2 50.2s-10.2 47.2 216.9 15.5c69.6-9.7 126.5-86.3 98.2-134.1z" id="Layer_4"/></g><g id="wing"><g id="Layer_3"><path class="wing" d="M335.8 359.2C307.7 387.3 132.7 491 132.7 491S273 352.5 301.1 324.4s58.6-43 68.2-33.4-5.4 40.1-33.5 68.2z"/><path  d="M487.5 323.8c-26 26-249.1 61.5-249.1 61.5s131.7-126.9 157.7-152.9 67.6-26.7 92.8-1.4c25.3 25.2 24.6 66.8-1.4 92.8z" class="wing2"/></g></g><circle class="eye" cx="538.5" cy="182.9" r="11.2" id="eye"/></svg>
+
+    </body>
+      </html>
